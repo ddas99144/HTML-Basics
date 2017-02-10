@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1
+{
+    color: midnightblue;
+}
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #393939;
+}
+li
+{
+    float: right;
+}
+li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover
+{
+    background-color: #101010;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+</head>
+<body>
+
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+<h1>An attempt to run JavaScript</h1>
+
+<script>
+function myScript()
+{
+    document.getElementById('hello_op').innerHTML="Hello Javascript!";
+    document.getElementById('hello_op').style.fontSize="25px";
+    document.getElementById('hello_op').style.color="red";
+}
+function smileys(mood)
+{
+    var face;
+    if(mood==1)
+    {
+        face="index.htm files\\Smileys - Happy.jpg"
+    }
+    else if(mood==0)
+    {
+        face="index.htm files\\Smileys - Indiffent.jpg"
+    }
+    else
+    {
+        face="index.htm files\\Smileys - Sad.jpg"
+    }
+    document.getElementById('SmileyFace').src=face;
+}
+</script>
+
+<img id="SmileyFace" src="index.htm files\Smileys - Indiffent.jpg" width="100" height="100"></img></br>
+
+<button type="button" onclick="smileys(-1)">Sad Face</button>
+<button type="button" onclick="smileys(0)">Indifferent</button>
+<button type="button" onclick="smileys(1)">Happy Face</button>
+
+<br>
+<br><p id="hello_op" style="height:120%;color:blue;">Hello World!</p>
+
+<button type="button" onclick="myScript()">Click here to change the above text</button>
+<br>
+<button type="button"
+onclick="document.getElementById('op_panel').innerHTML = Date()">
+Click me to display date and time</button>
+
+<br><p id="op_panel"></p></br>
+<noscript>Sorry Mate, no script for you.</noscript>
+</body>
+</html>

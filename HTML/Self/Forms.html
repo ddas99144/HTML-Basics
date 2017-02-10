@@ -1,0 +1,143 @@
+<!DOCTYPE xhtml>
+<html>
+<head>
+    <title>Trying HTML Forms</title>
+</head>
+<body>
+
+    <script type='javascript'>
+        var clear=true;
+        function clear(obj)
+        {
+            if(clear)
+            {
+                obj.value='';
+                clear=false;
+            }
+        }
+    </script>
+
+    <form action="Forms.html" oninput="x.value=parseInt(a.value)*parseInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100<br />*<br />
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br /><br />
+        <input type="submit" value="Clicking here will not help.">
+    </form>
+
+    <form action="Forms.html">
+        Username: <input type="text" name="user">
+        <br />
+        <br />
+        Encryption: <keygen name="security"></keygen>
+        <br />
+        <br />
+        <input type="submit">
+        <br />
+    </form>
+
+    <form action="C:\Users\Public">
+        <input list="folders" name="Public Directory">
+        <datalist id="folders">
+            <option value="Documents">
+            <option value="Downloads">
+            <option value="Music">
+            <option value="Pictures">
+            <option value="Videos">
+        </datalist>
+        <br />
+        <input type="submit">
+        <br />
+    </form>
+
+    <form action="Forms.html">
+        <textarea name="message" rows="3" cols="120">Help improve Android Studdio by sending usage statistics to Google Inc.</textarea>
+        <br />
+        <input type="submit" value="Refresh Page">
+        <br />
+        <br />
+    </form>
+
+    <!--form action="mailto:dipd.2009@gmail.com"-->
+    <form action="mailto:dipd.2009@gmail.com" method="get" enctype="text/plain">
+        <fieldset>
+            <legend>Send an Email through this web page, but you have click send in your email client anyway</legend>
+            Destination:
+            <br /><input type="text" name="destination"><br />
+            Subject:
+            <br /><input type="text" name="subject" value="Write Subject Line Here" onfocus='clear(this)'><br />
+            Body:
+            <br /><input type="text" name="body" size="40" value="Write Email Body" onfocus="if(this.value=='Write Email Body'){this.value='';}" onblur="if(this.value==''){this.value='Write Email Body';}"><br />
+            CC:
+            <br /><input type="text" name="cc" value="Address in CC"><br />
+            BCC:
+            <br /><input type="text" name="bcc"><br />
+            <br /><input type="submit" value="Send">
+            <p> </p>
+            <input type="reset" value="Reset"><br />
+        </fieldset>
+    </form>
+
+    <form action="New - Backup.html" method="post">
+<!--        First Name:&nbsp;<input type="text"> -->
+        First Name:<br /><input type="text" name="firstname">
+        <br />
+        Last Name:<br /><input type="text" name="lastname">
+        <br />
+        Password:<br /><input type="password" name="password">
+        <br />
+        <br />
+        <input type="submit" value="Javascript Practice">
+    </form>
+    <br />
+    <p>Please choose your favourite from the below options:</p>
+    <form>
+        <input type="radio" name="choice" value="starwars"> Star Wars
+        <br />
+        <input type="radio" name="choice" value="startrek" checked> Star Trek (Highly Recommended)
+        <br />
+        <input type="radio" name="choice" value="starplus"> Star Plus
+        <br />
+    </form>
+    <form action="Bad.html">
+        <fieldset>
+            <legend>DreamWorks Animation</legend>
+            Franchise# 1:&nbsp;<input type="text" name="franchise1" value="How to Train Your Dragon">
+            <br />
+            Franchise# 2:&nbsp;<input type="text" name="franchise2" value="Kung Fu Panda">
+            <br />
+            Franchise# 3:&nbsp;<input type="text" name="franchise3" value="Madagascar">
+            <br /><br />
+            <input type="checkbox" name="seen0" value="Zero">I have seen none of the above.
+            <br />
+            <input type="checkbox" name="seen1" value="One">I have seen only one of them.
+            <br />
+            <input type="checkbox" name="seen2" value="Two">I have seen two of the above movie series.
+            <br />
+            <input type="checkbox" name="seen3" value="Three">I have seen all of them!
+            <br />
+            <br />
+            <input type="submit" value="Enter values and Press Here">
+        </fieldset>
+
+        <fieldset>
+            <legend>Pixar Movie</legend>
+            <select name="pixarmovie">
+                <option value="walle">Wall-E</option>
+                <option value="bolt">Bolt</option>
+                <option value="wreckitralph">Wreck-it-Ralph</option>
+                <option value="up">Up</option>
+                <option value="ratatouille" selected>Ratatouille</option>
+                <option value="theincredibles">The Incredibles</option>
+                <option value="insideout">Inside Out</option>
+            </select>
+        </fieldset>
+    </form>
+    <br />
+    <br />
+    <button type="button" onclick="alert('You did not see this coming did you?')">Click Me Please</button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body 
+{
+    background-color:Aquamarine;
+}
+h1 
+{
+    font-family:"Courier", Times, serif;
+    border: 1px solid crimson;
+    padding: 30px;
+    margin-right: 1px;
+    margin: 70px;
+}
+p 
+{
+    font-style:oblique;
+}
+#p01
+{
+    color:Maroon;
+    font-style:Initial;
+}
+p.lyrics
+{
+    color:#FFDEAD;
+}
+a:link
+{
+    color: Green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited
+{
+    color: MediumVioletRed;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover
+{
+    color: Indigo;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active
+{
+    color: Gold;
+    background-color: transparent;
+    text-decoration: underline;
+}
+table, th, td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+div.movies
+{
+    background-color:black;
+    color:white;
+    margin:20px 0 20px 0;
+    border:20px;
+}
+span.specials
+{
+    font-size: 120%;
+    color: lime;
+}
