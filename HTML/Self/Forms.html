@@ -5,23 +5,45 @@
 </head>
 <body>
 
-    <script type='javascript'>
-        var clear=true;
-        function clear(obj)
-        {
-            if(clear)
-            {
-                obj.value='';
-                clear=false;
-            }
-        }
-    </script>
+    <form>
+        Select a color for no reason: 
+        <input type="color" name="favcolor" value="#acfe54">
+        <br /><br />
+        Now choose a Date: 
+        <input type="date" name="favdate">
+        <br /><br />
+        Anyways, write down a date here with Eighteen Hundred to Twenty-One Hundred: 
+        <input type="date" name="daterange" min="1800-01-01" max="2199-12-31">
+        <br /><br />
+        Forget it, enter the current date and time here: 
+        <input type="datetime-local" name="timestamp_current">
+        <br /><br />
+        Send an email adress to send mail: 
+        <input type="email" name="mail_to">
+        <br /><br />
+        Enter the month: 
+        <input type="month" name="favmonth">
+        <br /><br />
+        Here is a number: 
+        <input type="number" name="quantity" min="100" max="500" step="50">
+        <br /><br />
+        And here is a slider: 
+        <input type="range" name="numberslide" min="100" max="500" value="300">
+        <br /><br />
+        Let's search something: 
+        <input type="search" name="searchweb">
+        <br /><br />
+        Give us your telephone number: 
+        <input type="tel" name="phonenumber">
+        <br /><br />
+        <input type="submit" value="Validate Data">
+    </form>
 
     <form action="Forms.html" oninput="x.value=parseInt(a.value)*parseInt(b.value)">
         0
         <input type="range" id="a" name="a" value="50">
         100<br />*<br />
-        <input type="number" id="b" name="b" value="50">
+        <input type="number" id="b" name="b" value="50" min="0" max="100">
         =
         <output name="x" for="a b"></output>
         <br /><br />
@@ -61,12 +83,25 @@
         <br />
     </form>
 
+    <!--The below written script is for the following form: 'action="mailto:dipd.2009@gmail.com"'-->
+    <script type='javascript'>
+        var clear=true;
+        function clear(obj)
+        {
+            if(clear)
+            {
+                obj.value='';
+                clear=false;
+            }
+        }
+    </script>
+
     <!--form action="mailto:dipd.2009@gmail.com"-->
-    <form action="mailto:dipd.2009@gmail.com" method="get" enctype="text/plain">
+    <form action="mailto:" method="get" enctype="text/plain">
         <fieldset>
             <legend>Send an Email through this web page, but you have click send in your email client anyway</legend>
             Destination:
-            <br /><input type="text" name="destination"><br />
+            <br /><input type="email" name="destination"><br />
             Subject:
             <br /><input type="text" name="subject" value="Write Subject Line Here" onfocus='clear(this)'><br />
             Body:
@@ -138,6 +173,6 @@
     </form>
     <br />
     <br />
-    <button type="button" onclick="alert('You did not see this coming did you?')">Click Me Please</button>
+    <button type="button" onclick="alert('You did not see this coming, did you?')">Click Me Please</button>
 </body>
 </html>
