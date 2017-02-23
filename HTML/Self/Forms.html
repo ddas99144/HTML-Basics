@@ -5,47 +5,68 @@
 </head>
 <body>
 
+    <form method="get">
+        User Name: <input type="text" name="usrid" autofocus><br />
+        Enter Employee ID: <input type="number" step="5" placeholder="Should be a multiple of 5" name="empage" required><br />
+        Password: <input type="password" name="pswrd" required><br />
+        Email Address: <input type="email"><br />
+        <!--Email Address: <input type="email" value="dummy@sample.com"><br />-->
+        Department ID: <input type="text" name="departmentid" pattern="[A-Za-z]{2}[0-9]{1}" placeholder="Enter two letters and a number"
+                title="A department id is consist of two letters followed by a number, e.g. PD3" size="25" required><br />
+        Select File(s): <input type="file" name="uploadfiles" multiple><br />
+        <br />
+        <input type="submit" value="Login" style="font-style:italic;">
+        <input type="submit" value="Secure Login" style="font-style:strong;" formmethod="post">
+        <input type="submit" formnovalidate value="Submit without validation">
+        <input type="submit" formtarget="_blank" value="Submit in a new tab">
+        <br /><br />
+        <input type="image" src="bigredbutton.png"
+                alt="submit" height="100" width="100">
+        <br />
+    </form>
+
     <form>
-        Select a color for no reason: 
+        Select a color for no reason:
         <input type="color" name="favcolor" value="#acfe54">
         <br /><br />
-        Now choose a Date: 
+        Now choose a Date:
         <input type="date" name="favdate">
         <br /><br />
-        Anyways, write down a date here with Eighteen Hundred to Twenty-One Hundred: 
+        Anyways, write down a date here with Eighteen Hundred to Twenty-One Hundred:
         <input type="date" name="daterange" min="1800-01-01" max="2199-12-31">
         <br /><br />
-        Please provide a time: 
+        Please provide a time:
         <input type="time" name="mytime">
         <br /><br />
-        Forget it, enter the current date and time here: 
+        Forget it, enter the current date and time here:
         <input type="datetime-local" name="timestamp_current">
         <br /><br />
-        Send an email adress to send mail: 
+        Send an email adress to send mail:
         <input type="email" name="mail_to">
         <br /><br />
-        Enter the month: 
+        Enter the month:
         <input type="month" name="favmonth">
         <br /><br />
-        Set the week: 
+        Set the week:
         <input type="week" name="favweek">
         <br /><br />
-        Here is a number: 
+        Here is a number:
         <input type="number" name="quantity" min="100" max="500" step="50">
         <br /><br />
-        And here is a slider: 
+        And here is a slider:
         <input type="range" name="numberslide" min="100" max="500" value="300">
         <br /><br />
-        Let's search something: 
-        <input type="search" name="searchweb">
+        Let's search something within 20 letters:
+        <input type="search" name="searchweb" size="20">
         <br /><br />
-        Give us your telephone number: 
+        Give us your telephone number:
         <input type="tel" name="phonenumber">
         <br /><br />
-        Provide your web address, i.e. url (HAHA): 
+        Provide your web address, i.e. url (HAHA):
         <input type="url" name="favurl">
         <br /><br />
         <input type="submit" value="Validate Data" style="color:Gold;background-color:Black;">
+        <input type="submit" value="Submit as Multipart/form data" formenctype="multipart/form-data">
     </form>
 
     <form action="Forms.html" oninput="x.value=parseInt(a.value)*parseInt(b.value)">
@@ -80,7 +101,7 @@
             <option value="Videos">
         </datalist>
         <br />
-        <input type="submit">
+        <input type="submit" value="View Public Folders">
         <br />
     </form>
 
@@ -106,37 +127,46 @@
     </script>
 
     <!--form action="mailto:dipd.2009@gmail.com"-->
-    <form action="mailto:" method="get" enctype="text/plain">
+    <form action="mailto:" method="get" enctype="text/plain" novalidate>
         <fieldset>
             <legend>Send an Email through this web page, but you have click send in your email client anyway</legend>
             Destination:
-            <br /><input type="email" name="destination"><br />
+            <br /><input type="email" name="destination" value="dipd.2009@gmail.com" readonly><br />
             Subject:
             <br /><input type="text" name="subject" value="Write Subject Line Here" onfocus='clear(this)'><br />
             Body:
             <br /><input type="text" name="body" size="40" value="Write Email Body" onfocus="if(this.value=='Write Email Body'){this.value='';}" onblur="if(this.value==''){this.value='Write Email Body';}"><br />
             CC:
-            <br /><input type="text" name="cc" value="Address in CC"><br />
+            <br /><input type="email" name="cc" value="Address in CC"><br />
             BCC:
-            <br /><input type="text" name="bcc"><br />
+            <br /><input type="text" name="bcc" value="NO BCC!" disabled><br />
             <br /><input type="submit" value="Send">
             <p> </p>
             <input type="reset" value="Reset"><br />
         </fieldset>
     </form>
 
-    <form action="New - Backup.html" method="post">
+    <br />
+
+    <p>How much hours do you want to sleep?
+    <input type="number" name="sleephour" form="myform" min="1" max="96"></p>
+
+    <br />
+
+    <form action="New - Backup.html" method="post" autocomplete="on">
 <!--        First Name:&nbsp;<input type="text"> -->
-        First Name:<br /><input type="text" name="firstname">
+        First Name:<br /><input type="text" name="firstname" maxlength="40">
         <br />
         Last Name:<br /><input type="text" name="lastname">
         <br />
-        Password:<br /><input type="password" name="password">
+        Password:<br /><input type="password" name="password" autocomplete="off">
         <br />
         <br />
         <input type="submit" value="Javascript Practice">
     </form>
+
     <br />
+
     <p>Please choose your favourite from the below options:</p>
     <form>
         <input type="radio" name="choice" value="starwars"> Star Wars
@@ -146,7 +176,8 @@
         <input type="radio" name="choice" value="starplus"> Star Plus
         <br />
     </form>
-    <form action="Bad.html">
+
+    <form action="Bad.html" id="myform">
         <fieldset>
             <legend>DreamWorks Animation</legend>
             Franchise# 1:&nbsp;<input type="text" name="franchise1" value="How to Train Your Dragon">
@@ -178,6 +209,9 @@
                 <option value="theincredibles">The Incredibles</option>
                 <option value="insideout">Inside Out</option>
             </select>
+            <br />
+            <br />
+            <input type="submit" value="Reload Page" formaction="Forms.html">
         </fieldset>
     </form>
     <br />

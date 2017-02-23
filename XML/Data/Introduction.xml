@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note movie="Toy Story">
+    <date>2017-02-23</date>
+    <hour>12:40</hour>
+    <to>Buzz</to>
+    <from>Woody</from>
+    <heading>Sings: </heading>
+    <body>You've got a friend in me.</body>
+</note>
