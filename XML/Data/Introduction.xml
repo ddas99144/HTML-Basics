@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<root
+xmlns:h="http://www.dummy.website/HTML/">
+
 <!-- This - is - - a comment -->
+
 <note movie="Toy Story">
     <date>2017-02-23</date>
     <hour>12:40</hour>
@@ -8,3 +13,54 @@
     <heading>Sings: </heading>
     <body>You've got a friend in me.</body>
 </note>
+
+<!-- <h:table xmlns:h="http://www.dummy.website/HTML/"> -->
+<h:table>
+    <h:tr>
+        <h:td>Apples</h:td>
+        <h:td>Bananas</h:td>
+    </h:tr>
+</h:table>
+
+<f:table xmlns:f="http://www.dummy.website/Furniture/">
+    <f:name>African Coffee Table</f:name>
+    <f:width>80</f:width>
+    <f:length>120</f:length>
+</f:table>
+
+<default_namespace_example xmlns="http://www.dummy.website/Default_Namespace/">
+    <paragraph>
+        <sentences>
+            <word>This</word>
+            <blank_space></blank_space>
+            <word>is</word>
+            <blank_space></blank_space>
+            <word>an</word>
+            <blank_space></blank_space>
+            <word>example</word>
+            <blank_space></blank_space>
+            <word>of</word>
+            <blank_space></blank_space>
+            <word>default</word>
+            <blank_space></blank_space>
+            <word>namespace</word>
+            <blank_space></blank_space>
+            <word>which</word>
+            <blank_space></blank_space>
+            <word>does</word>
+            <blank_space></blank_space>
+            <word>not</word>
+            <blank_space></blank_space>
+            <word>uses</word>
+            <blank_space></blank_space>
+            <word>any</word>
+            <blank_space></blank_space>
+            <word>prefix</word>
+            <blank_space></blank_space>
+            <word>.</word>
+            <blank_space></blank_space>
+        </sentences>
+    </paragraph>
+</default_namespace_example>
+
+</root>
