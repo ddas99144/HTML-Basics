@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XML Parser Example</title>
+</head>
+
+<body >
+<!-- HTML code for Internal XML data begins here. -->
+    <h3>Simple details of a Book:</h3>
+    <p>Title: <span id="title" style="color:Red";></span></p>
+    <p>Author: <span id="author" style="color:Blue";></span></p>
+    <p>Year: <span id="year" style="color:Green";></span></p>
+    <p id="message" style="color:Gold";></p>
+
+    <script>
+        var parser, xmlDoc, index = 0;
+        var MAX_INDEX = 3;
+        var text = "<bookstore>" + "<book>" +
+                "<title>Bossypants</title>" +
+                "<author>Tina Fey</author>" +
+                "<year>2011</year>" +
+                "</book>" +
+                "<book>" +
+                "<title>Asura: Tale of the Vanquished</title>" +
+                "<author>Anand Neelakantan</author>" +
+                "<year>2012</year>" +
+                "</book>" +
+                "<book>" +
+                "<title>Digital Fortress</title>" +
+                "<author>Dan Brown</author>" +
+                "<year>1998</year>" +
+                "</book>" +
+                "<book>" +
+                "<title>The Old Man and the Sea</title>" +
+                "<author>Ernest Hemingway</author>" +
+                "<year>1951</year>" +
+                "</book>" + "</bookstore>";
+
+        function select_book(selection)
+        {
+            index = index + selection;
+
+            if(index < 0)
+            {
+                index = 0;
+                document.getElementById("message").innerHTML="First Book is already displayed!";
+            }
+            else if(index > MAX_INDEX)
+            {
+                index = MAX_INDEX;
+                document.getElementById("message").innerHTML="This is the last Book!";
+            }
+            else
+                document.getElementById("message").innerHTML="<br />";
+
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(text,"text/xml");
+
+            document.getElementById("title").innerHTML =
+                    xmlDoc.getElementsByTagName("title")[index].childNodes[0].nodeValue;
+            document.getElementById("author").innerHTML =
+                    xmlDoc.getElementsByTagName("author")[index].childNodes[0].nodeValue;
+            document.getElementById("year").innerHTML =
+                    xmlDoc.getElementsByTagName("year")[index].childNodes[0].nodeValue;
+        }
+
+        select_book(0);
+    </script>
+
+    <button type="button" onclick="select_book(-1)">Previous</button>
+    <button type="button" onclick="select_book(+1)">Next</button>
+    <br /><br />
+<!-- HTML code for Internal XML data ends here. -->
+
+<!-- HTML code for External XML data begins here. -->
+    <h2>My CD Collection</h2>
+
+    <button type="button" onclick="loadXMLDoc()">Get my CD Collection</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function loadXMLDoc()
+        {
+			var xmlhttp = new XMLHttpRequest();
+			
+            xmlhttp.onreadystatechange = function()
+            {
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    myFunction(this);
+                }
+            };
+			if (xmlhttp.withCredentials !== undefined)
+				{
+					xmlhttp.open("GET", "https://raw.githubusercontent.com/ddas99144/HTML-Basics/master/XML/Data/css_friendly.xml", true);
+					xmlhttp.send();
+				}
+			
+            
+        }
+
+        function myFunction(xml)
+        {
+			alert(xml.responseXML)
+            var x, i, xmlDoc, txt;
+            xmlDoc = xml.responseXML;
+            txt = "";
+            x = xmlDoc.getElementsByTagName("title");
+            for (i = 0; i < x.length; i++)
+            {
+                txt += x[i].childNodes[0].nodeValue + "<br />";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+	</script>
+<!-- HTML code for External XML data ends here. -->
+
+</body>
+</html>
