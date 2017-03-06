@@ -43,7 +43,7 @@
             if(index < 0)
             {
                 index = 0;
-                document.getElementById("message").innerHTML="First Book is already displayed!";
+                document.getElementById("message").innerHTML="The first Book is already displayed!";
             }
             else if(index > MAX_INDEX)
             {
@@ -83,7 +83,7 @@
         function loadXMLDoc()
         {
 			var xmlhttp = new XMLHttpRequest();
-			
+
             xmlhttp.onreadystatechange = function()
             {
                 if(this.readyState == 4 && this.status == 200)
@@ -92,12 +92,10 @@
                 }
             };
 			if (xmlhttp.withCredentials !== undefined)
-				{
-					xmlhttp.open("GET", "https://raw.githubusercontent.com/ddas99144/HTML-Basics/master/XML/Data/css_friendly.xml", true);
-					xmlhttp.send();
-				}
-			
-            
+            {
+                xmlhttp.open("GET", "https://github.com/ddas99144/HTML-Basics/blame/master/XML/Data/cd_catalog.xml", true);
+                xmlhttp.send();
+            }
         }
 
         function myFunction(xml)
