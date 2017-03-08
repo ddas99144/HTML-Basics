@@ -3,6 +3,25 @@
 <root
 xmlns:h="http://www.dummy.website/HTML/">
 
+<bookstore xmlns:xlink="http://www.dummy.website/XLink">
+    <book title="Harry Potter">
+        <description xlink:type="simple"
+        xlink:href="/files/harry-potter-posters-03.jpg"
+        xlink:show="new">
+            This title is completely incorrect as there is no book called <b>Harry Potter</b> only.
+        </description>
+    </book>
+
+    <book title="Sherlock Holmes">
+        <description xlink:type="simple"
+        xlink:href="/files/sherlock_abominable-bride_episode_icon.jpg"
+        xlink:show="new">
+            This title is also wrong because <i>Sherlock Holmes</i> is a character, not a book..
+        </description>
+    </book>
+</bookstore>
+
+
 <!-- This - is - - a comment -->
 
 <note movie="Toy Story">
