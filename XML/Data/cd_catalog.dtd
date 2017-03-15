@@ -1,0 +1,10 @@
+<!DOCTYPE catalog [
+<!ELEMENT catalog (cd)>
+<!ELEMENT cd (title,artist,year,label,genre,minutes)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT artist (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT label (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT minutes (#PCDATA)>
+]>

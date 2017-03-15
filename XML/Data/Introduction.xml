@@ -21,8 +21,41 @@ xmlns:h="http://www.dummy.website/HTML/">
     </book>
 </bookstore>
 
+<dogbreeds>
+    <dog breed="Rottweiler" id="rottweiler">
+        <picture url="https://dog.com/rottweiler.gif" />
+        <history>The Rottweiler's ancestors were probably Roman
+  drover dogs.....</history>
+        <temperament>Confident, bold, alert and imposing, the Rottweiler
+  is a popular choice for its ability to protect....</temperament>
+    </dog>
+    
+    <dog breed="FCRetriever" id="fcretriever">
+        <picture url="https://dog.com/fcretriever.gif" />
+        <history>One of the earliest uses of retrieving dogs was to
+  help fishermen retrieve fish from the water....</history>
+        <temperament>The flat-coated retriever is a sweet, exuberant,
+  lively dog that loves to play and retrieve....</temperament>
+    </dog>
+</dogbreeds>
 
 <!-- This - is - - a comment -->
+
+<mydogs xmlns:xlink="https://dog.com/mydogs">
+    <mydog>
+        <description>Anton is my favorite dog. He has won a lot of.....</description>
+        <fact xlink:type="simple" xlink:href="/Introduction.xml.#rottweiler">
+            Fact about Rottweiler 
+        </fact>
+    </mydog>
+    
+    <mydog>
+        <description>Pluto is the sweetest dog on earth......</description>
+        <fact xlink:type="simple" xlink:href="/Introduction.xml.#fcretriever">
+            Fact about flat-coated Retriever 
+        </fact>
+    </mydog>
+</mydogs>
 
 <note movie="Toy Story">
     <date>2017-02-23</date>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE bookstore [
+<!ENTITY main_title "Asura">
+<!ENTITY colon "&#58;">
+<!ENTITY subtitle "Tale of the Vanquished">
+]>
+<bookstore>
+    <book>
+        <title>Bossypants</title>
+        <author>Tina Fey</author>
+        <year>2011</year>
+    </book>
+    <book>
+        <title>&main_title;&colon; &subtitle;</title>
+        <author>Anand Neelakantan</author>
+        <year>2012</year>
+    </book>
+    <book>
+        <title>Digital Fortress</title>
+        <author>Dan Brown</author>
+        <year>1998</year>
+    </book>
+    <book>
+        <title>The Old Man and the Sea</title>
+        <author>Ernest Hemingway</author>
+        <year>1951</year>
+    </book>
+</bookstore>
