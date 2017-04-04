@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog SYSTEM "cd_catalog.dtd">
+
+<catalog>
+    <cd>
+        <title>Hybrid Theory</title>
+        <artist>Linkin Park</artist>
+        <year>2000</year>
+        <label>Warner Bros.</label>
+        <genre>Nu metal rap metal alternative metal</genre>
+        <minutes>37:45</minutes>
+    </cd>
+
+    <cd>
+        <title>Meteora</title>
+        <artist>Linkin Park</artist>
+        <year>2003</year>
+        <label>Warner Bros. Machine Shop</label>
+        <genre>Nu metal rap metal rap rock alternative metal alternative rock</genre>
+        <minutes>36:43</minutes>
+    </cd>
+
+    <cd>
+        <title>Minutes to Midnight</title>
+        <artist>Linkin Park</artist>
+        <year>2007</year>
+        <label>Warner Bros. Machine Shop</label>
+        <genre>Alternative rock alternative metal</genre>
+        <minutes>43:23</minutes>
+    </cd>
+
+    <cd>
+        <title>A Thousand Suns</title>
+        <artist>Linkin Park</artist>
+        <year>2010</year>
+        <label>Warner Bros. Machine Shop</label>
+        <genre>Alternative rock alternative metal</genre>
+        <minutes>47:48</minutes>
+    </cd>
+
+    <cd>
+        <title>Living Things</title>
+        <artist>Linkin Park</artist>
+        <year>2012</year>
+        <label>Warner Bros. Machine Shop</label>
+        <genre>Alternative rock electronic rock rap rock</genre>
+        <minutes>36:59</minutes>
+    </cd>
+</catalog>

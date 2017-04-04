@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction1()
+            {
+                document.getElementById("demo5").innerHTML="Pragraph Changed through head.";
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>JavaScript in Head</h1>
+
+        <p id="demo5">Paragraph to change.</p>
+
+        <button type="button" onclick="myFunction1()">Give it a Try</button>
+
+        <button type="button" onclick="myFunction2()">Give it a Try</button>
+        <script>
+            function myFunction2()
+            {
+                document.getElementById("demo5").innerHTML="Pragraph Changed through body.";
+            }
+        </script>
+
+        <button type="button" onclick="myFunction3()">Give it a Try</button>
+        <script src="myScript1.js"></script>
+
+        <button type="button" onclick="myFunction4()">Give it a Try</button>
+        <script src="Files\myScript2.js"></script>
+
+        <!--script src="http://www.dummy.website/JavaScript/myScript2.js"></script-->
+
+        <h1>What Can JavaScript Do?</h1>
+
+        <p id="demo0">JavaScript can change HTML content.</p>
+
+        <button type="button" onclick='document.getElementById("demo0").innerHTML = "Hello World!"'>
+            You can only <b>Click</b> here, nothing else to do
+        </button>
+        <button type="button" onclick="document.getElementById('demo0').innerHTML = 'Hello World!'">
+            You can only <b>Click</b> here, nothing else to do
+        </button>
+
+        <p id="demo1">JavaScript can change the style of an HTML content.</p>
+
+        <button type="button" onclick='document.getElementById("demo1").style.fontSize="35px"'>
+            <i>Click</i> here to change font size
+        </button>
+
+        <p id="demo2">JavaScript can hide HTML elements.</p>
+
+        <button type="button" onclick='document.getElementById("demo2").style.display="none"'>
+            Click here to hide the above text
+        </button>
+
+        <p id="demo3" style="display:none;">
+            JavaScript can show hidden HTML elements.
+        </p>
+
+        <button type="button" onclick='document.getElementById("demo3").style.display="block"'>
+            Click here to make a block
+        </button>
+
+        <h1>JavaScript in Body</h1>
+
+        <p id="demo4"></p>
+
+        <script>
+            document.getElementById("demo4").innerHTML="Text changed by JS";
+        </script>
+    </body>
+</html>
